@@ -2,7 +2,12 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import workintech from '/workintech.svg'
 import './App.css'
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./pages/Home";
+import Form from "./pages/Form";
+import OrderReceived from "./pages/OrderReceived";
 
+/*
 function App() {
   const [count, setCount] = useState(0)
 
@@ -33,3 +38,16 @@ function App() {
 }
 
 export default App
+*/
+
+export default function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/form" component={Form} />
+        <Route path="/order-received" component={OrderReceived} />
+      </Switch>
+    </Router>
+  );
+}
