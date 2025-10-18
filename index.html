@@ -1,16 +1,177 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="tr">
 
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./workintech.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700
+&family=Quattrocento:wght@700
+&family=Roboto+Condensed:wght@300;400;500;700
+&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workintech + 🍕</title>
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header class="ust-alan">
+    <div class="icerik-govde">
+
+      <div class="kimlik">
+        <img class="logo-yazi" src="assets/iteration-1/logo.svg"/>
+      </div>
+
+      <div class="pizza-sahne" aria-hidden="true">
+        <div class="slogan-kutu">
+          <p class="ince-not">fırsatı kaçırma</p>
+          <h1 class="buyuk-baslik">KOD ACIKTIRIR<br/> PIZZA, DOYURUR</h1>
+          <a href="#" class="dugme dugme-sari">ACIKTIM</a>
+        </div>
+        <img src="assets/iteration-1/home-banner.png" />
+      </div>
+
+      <nav class="kategori-serit" aria-label="Kategoriler">
+        <button class="kategori-kutu">
+          <img src="assets/iteration-2/icons/1.svg" /> YENİ! Kore
+        </button>
+        <button class="kategori-kutu aktif">
+          <img src="assets/iteration-2/icons/2.svg" /> Pizza
+        </button>
+        <button class="kategori-kutu">
+          <img src="assets/iteration-2/icons/3.svg" /> Burger
+        </button>
+        <button class="kategori-kutu">
+          <img src="assets/iteration-2/icons/4.svg" /> Kızartmalar
+        </button>
+        <button class="kategori-kutu">
+          <img src="assets/iteration-2/icons/5.svg" /> Fast food
+        </button>
+        <button class="kategori-kutu">
+          <img src="assets/iteration-2/icons/6.svg" /> Gazlı İçecek
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="kampanya-alani">
+    <div class="icerik-govde promos-desen">
+      <article class="kampanya-kutu kirmizi-buyuk">
+        <div class="kampanya-icerik">
+          <h2 class="kampanya-baslik">Özel<br/>Lezzetus</h2>
+          <p class="kampanya-alt">Position:Absolute Acı Burger</p>
+          <a href="#" class="dugme dugme-beyaz dugme-kucuk">SİPARİŞ VER</a>
+        </div>
+        <img src="assets/iteration-2/cta/kart-1.png" class="kampanya-resim" />
+      </article>
+
+      <article class="kampanya-kutu koyu-kutu">
+        <div class="kampanya-icerik">
+          <h3 class="kucuk-baslik">Hackathlon Burger Menü</h3>
+          <a href="#" class="dugme dugme-beyaz dugme-kucuk">SİPARİŞ VER</a>
+        </div>
+        <img src="assets/iteration-2/cta/kart-2.png" class="kampanya-resim" />
+      </article>
+
+      <article class="kampanya-kutu bej-kutu">
+        <div class="kampanya-icerik">
+          <h3 class="kucuk-baslik"><span class="uzatma">Çoooook</span> hızlı<br/> npm gibi kurye</h3>
+          <a href="#" class="dugme dugme-beyaz dugme-kucuk">SİPARİŞ VER</a>
+        </div>
+        <img src="assets/iteration-2/cta/kart-3.png" class="kampanya-resim" />
+      </article>
+    </div>
+  </section>
+
+  <section class="menu-alani">
+    <div class="icerik-govde">
+      <p class="el-yazisi">en çopk paketlenen menüler</p>
+      <h2 class="orta-baslik">Acıktıran Kodlara Doyuran Lezzetler</h2>
+
+      <div class="filtre-satiri">
+        <button class="filtre-kapsul"><img src="assets/iteration-2/icons/1.svg" /> Ramen</button>
+        <button class="filtre-kapsul aktif"><img src="assets/iteration-2/icons/2.svg" /> Pizza</button>
+        <button class="filtre-kapsul"><img src="assets/iteration-2/icons/3.svg" /> Burger</button>
+        <button class="filtre-kapsul"><img src="assets/iteration-2/icons/4.svg" /> French fries</button>
+        <button class="filtre-kapsul"><img src="assets/iteration-2/icons/5.svg" /> Fast food</button>
+        <button class="filtre-kapsul"><img src="assets/iteration-2/icons/6.svg" /> Soft drinks</button>
+      </div>
+
+      <div class="urun-katalogu">
+        <article class="urun-kart">
+          <img src="assets/iteration-2/pictures/food-1.png" class="urun-resim" />
+          <h3 class="urun-baslik">Terminal Pizza</h3>
+          <div class="urun-alt">
+            <span class="puan">4.9</span>
+            <span class="adet">(200)</span>
+            <strong class="fiyat">60₺</strong>
+          </div>
+        </article>
+
+        <article class="urun-kart">
+          <img src="assets/iteration-2/pictures/food-2.png" class="urun-resim" />
+          <h3 class="urun-baslik">Position Absolute Acı Pizza</h3>
+          <div class="urun-alt">
+            <span class="puan">4.9</span>
+            <span class="adet">(200)</span>
+            <strong class="fiyat">60₺</strong>
+          </div>
+        </article>
+
+        <article class="urun-kart">
+          <img src="assets/iteration-2/pictures/food-3.png" class="urun-resim" />
+          <h3 class="urun-baslik">useEffect Tavuklu Burger</h3>
+          <div class="urun-alt">
+            <span class="puan">4.9</span>
+            <span class="adet">(200)</span>
+            <strong class="fiyat">60₺</strong>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="alt-bolum">
+    <div class="icerik-govde alt-izgara">
+      <div class="alt-kimlik">
+        <img class="logo-yazi buyuk-logo" src="assets/iteration-2/footer/logo-footer.svg" />
+        <ul class="iletisim-liste">
+          <li><img src="assets/iteration-2/footer/icons/icon-1.png" /> 341 Londonderry Road,<br/> İstanbul Türkiye</li>
+          <li><img src="assets/iteration-2/footer/icons/icon-2.png" /> <a href="#">aciktim@teknolojikyemekler.com</a></li>
+          <li><img src="assets/iteration-2/footer/icons/icon-3.png" /> <a href="#">+90 216 123 45 67</a></li>
+        </ul>
+      </div>
+
+      <div class="alt-menu">
+        <h4 class="alt-baslik">Hot Menu</h4>
+        <ul class="mini-menu">
+          <li>Terminal Pizza</li>
+          <li>5 Kişilik Hackathlon Pizza</li>
+          <li>useEffect Tavuklu Pizza</li>
+          <li>Beyaz Console Frosty</li>
+          <li>Testler Geçti Mutlu Burger</li>
+          <li>Position Absolute Acı Burger</li>
+        </ul>
+      </div>
+
+      <div class="alt-ig">
+        <h4 class="alt-baslik">Instagram</h4>
+        <div class="ig-izgara">
+          <img src="assets/iteration-2/footer/insta/li-0.png" />
+          <img src="assets/iteration-2/footer/insta/li-1.png" />
+          <img src="assets/iteration-2/footer/insta/li-2.png" />
+          <img src="assets/iteration-2/footer/insta/li-3.png" />
+          <img src="assets/iteration-2/footer/insta/li-4.png" />
+          <img src="assets/iteration-2/footer/insta/li-5.png" />
+        </div>
+      </div>
+    </div>
+
+    <div class="icerik-govde alt-cubuk">
+      <small>© 2023 Teknolojik Yemekler.</small>
+      <img src="assets/iteration-2/footer/icons/icon-4.PNG" class="tiny-ikon" />
+    </div>
+  </footer>
+
   </body>
 
 </html>

@@ -1,14 +1,49 @@
+/* Sayfa Geneli */
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #213547;
-  background-color: #ffffff;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Hata Düzeltmeleri - Tasarım İyileştirmeleri */
+/* 
+Sayfa üzerindeki bileşenler başlangıçta yan yana görünüyordu, alt alta görünmesi için aşağıdaki
+kodları ekledim.
+*/
+body {
+  display: block !important;
+  margin: 0;
+}
+
+header, section, footer { 
+  display: block; 
+  width: 100%;
+}
+
 
 a {
   font-weight: 500;
@@ -16,7 +51,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #747bff;
+  color: #535bf2;
 }
 
 body {
@@ -25,11 +60,1077 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Barlow';
+  color: #292929;
+  background: #fff;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.4rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.05;
+  font-family: "Roboto Condensed";
+  letter-spacing: 0.4px; 
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  font-family: "Quattrocento";
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.25;
+  font-family: "Barlow";
+}
+
+.icerik-govde {
+  width: min(1200px, 100% - 48px);
+}
+
+/* Header Kısmı */
+
+.ust-alan {
+  background: #CE2829;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 28px 0 0;
+}
+
+.kimlik {
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  justify-content: center;
+}
+
+.slogan-kutu {
+  margin: 24px auto 12px; 
+  text-align: center; 
+  max-width: 760px;
+}
+
+.ince-not {
+  font-family: "Satisfy"; 
+  font-size: 22px; 
+  margin: 6px 0 8px;
+}
+
+.buyuk-baslik {
+  color:#fff;
+}
+
+.dugme {
+  display: inline-block; 
+  padding: 12px 22px; 
+  border-radius: 30px; 
+  font-weight: 700; 
+  letter-spacing: 0.4px;
+  background: #fff; 
+  color: #111; 
+  border: 0; 
+  box-shadow: 0 2px 0 opacity;
+}
+
+.dugme-kucuk {
+  padding: 10px 16px; 
+  font-weight: 600;
+}
+
+.dugme-sari {
+  background: #FDC913; 
+  color: #1d1d1d;
+}
+
+.dugme-beyaz {
+  background: #fff;
+  color: #CE2829;
+}
+
+.pizza-sahne {
+  max-width: 980px; 
+  margin: 18px auto 0;
+}
+
+.kategori-serit{
+  display: flex; 
+  gap: 18px; 
+  align-items: center; 
+  justify-content: center;
+  background: #fff; 
+  border: 1px solid #e9e9e9; 
+  border-radius: 12px;
+  padding: 12px 18px; 
+  margin: 22px 0 36px;
+}
+
+.kategori-kutu {
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  padding: 10px 14px;
+  border-radius: 30px; 
+  border: 1px solid transparent; 
+  background: #fff; 
+  color: #333;
+}
+
+.kategori-kutu img{ 
+  width: 24px; 
+  height: 24px;
+}
+
+.kategori-kutu.aktif {
+  background: #1e1e1e; 
+  color: #fff;
+}
+
+/* İlk Section Kısmı - Kampanya Alanı */
+
+.kampanya-alani 
+{
+  background: #FAF7F2;
+  padding: 28px 0;
+}
+
+.promos-desen {
+  display: grid; 
+  gap: 18px; 
+  grid-template-columns: 2fr 1fr; 
+  grid-auto-rows: 180px;
+}
+
+.kampanya-kutu {
+  position: relative; 
+  border-radius: 18px; 
+  overflow: hidden; 
+  padding: 20px; 
+  isolation: isolate;
+  display: flex; 
+  align-items: center;
+}
+
+.kampanya-icerik {
+  z-index: 1;
+  color: #fff;
+}
+
+.kampanya-baslik {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  font-family: "Quattrocento"; 
+  margin-bottom: 8px;
+}
+
+.kampanya-alt {
+  opacity: 0.95; 
+  margin: 6px 0 14px;
+}
+
+.kucuk-baslik {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;;
+  font-family: "Barlow";
+  margin-bottom: 14px;
+}
+
+.uzatma {
+  letter-spacing: 0.6px;
+}
+
+.kampanya-resim{
+  position: absolute; 
+  right: 10px; 
+  bottom: -4px; 
+  max-height: 170px; 
+  object-fit: contain;
+}
+
+.kirmizi-buyuk {
+  background: #D83A3B; 
+  grid-row: 1 / span 2;
+}
+
+.koyu-kutu { 
+  background: #1f1f1f;
+}
+
+.bej-kutu {
+  background:#EFE7DA; 
+  color:#2e2a21;
+}
+
+.bej-kutu .kampanya-icerik {
+  color: #2e2a21;
+}
+
+
+/* İkinci Section Kısmı - Menü ve Ürünler Kısmı */
+
+.menu-alani { 
+  padding: 34px 0 48px;
+}
+
+.el-yazisi {
+  font-family: "Satisfy"; 
+  text-align: center; 
+  color: #b3554f;
+  margin-bottom: 6px; 
+  font-size: 20px;
+}
+
+.orta-baslik {
+  text-align: center;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.2;
+  font-family: "Quattrocento";
+  margin-bottom: 16px; 
+}
+
+.filtre-satiri {
+  display: flex; 
+  gap: 10px; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  margin-bottom: 18px;
+}
+
+.filtre-kapsul {
+  display: inline-flex; 
+  align-items: center; 
+  gap: 10px; 
+  border-radius: 30px;
+  padding: 10px 14px; 
+  background: #fff; 
+  border: 1px solid #ececec; 
+  color: #333;
+}
+
+.filtre-kapsul.aktif {
+  background: #1e1e1e; 
+  color: #fff;
+}
+
+.urun-katalogu {
+  display: grid; 
+  gap: 22px; 
+  grid-template-columns: repeat(3,1fr);
+}
+
+.urun-kart {
+  background: #fff; 
+  border: 1px solid #eee; 
+  border-radius: 14px; 
+  padding: 14px;
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px;
+}
+
+.urun-resim {
+  width: 100%; 
+  aspect-ratio: 1/1; 
+  object-fit: contain;
+}
+
+.urun-baslik {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.25;
+  font-family: "Barlow";
+}
+
+.urun-alt {
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  color: #777;
+}
+
+.fiyat {
+  margin-left: auto; 
+  color: #111; 
+  font-weight: 800;
+}
+
+/* Footer Kısmı */
+
+.alt-bolum {
+  background: #141414; 
+  color: #d8d8d8; 
+  padding: 34px 0 14px;
+}
+
+.alt-izgara {
+  display: grid; 
+  gap: 28px; 
+  grid-template-columns: 1.2fr 1fr 1fr;
+}
+
+.iletisim-liste {
+  list-style: none; 
+  margin: 12px 0 0; 
+  padding: 0; 
+  display: grid; 
+  gap: 10px;
+}
+
+.iletisim-liste img {
+  width: 18px; 
+  height: 18px; 
+  margin-right: 8px; 
+  vertical-align: -3px;
+}
+
+.iletisim-liste li {
+  display: flex; 
+  gap: 10px;
+}
+
+.alt-baslik {
+  color: #fff; 
+  margin: 6px 0 12px; 
+  font-weight: 700;
+}
+
+.mini-menu {
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  display: grid; 
+  gap: 8px; 
+  color: #bfbfbf;
+}
+
+.ig-izgara {
+  display: grid; 
+  grid-template-columns: repeat(3,1fr); 
+  gap: 8px;
+}
+
+.ig-izgara img {
+  width: 100%; 
+  aspect-ratio: 1/1; 
+  object-fit: cover; 
+  border-radius: 8px;
+}
+
+.alt-cubuk {
+  margin-top: 16px; 
+  padding-top: 12px; 
+  border-top: 1px solid #2a2a2a;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  color: #9a9a9a; 
+  font-size: 0.9rem;
+}
+
+.tiny-ikon {
+  width: 16px; 
+  height: 16px; 
+  opacity: 0.8;
+}
+
+/* Mobil Responsive için Media Query'ler ve Breakpoint'ler */
+
+@media (max-width: 1023px) {
+  h1 { 
+    font-size: 48px;
+  }
+  .promos-desen {
+    grid-template-columns: 1fr; 
+    grid-auto-rows: auto;
+  }
+  .kirmizi-buyuk { 
+    grid-row: auto;
+  }
+  .urun-katalogu { 
+    grid-template-columns: repeat(2,1fr);
+  }
+  .alt-izgara {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 599px) {
+  h1 {
+    font-size: 38px;
+  }
+  .kategori-serit {
+    gap: 10px; 
+    padding: 10px 12px;
+  }
+  .urun-katalogu {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hata Düzeltmeleri - Tasarım İyileştirmeleri */
+
+/* Header */
+.ust-alan {
+  background: #CE2829;
+  color: #fff;
+  padding: 24px 0 18px;
+  overflow: hidden;
+}
+
+.ust-alan .icerik-govde {
+  width: min(1120px, 100% - 80px);
+  margin-inline: auto;
+}
+
+.ince-not { 
+  color: #FDC913;
+  font-family: "Satisfy";
+  font-size: 22px;
+  margin: 6px 0 10px;
+}
+
+.slogan-kutu {
+  max-width: 700px;
+  margin: 14px auto 6px;
+  text-align: center;
+}
+
+.pizza-sahne { 
+  max-width: 960px; 
+  margin: 16px auto 0; 
+}
+
+.pizza-sahne img { 
+  width: 100%; 
+  filter: drop-shadow(0 18px 40px opacity); 
+}
+
+.kategori-serit {
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  gap: 16px; 
+  padding: 14px 18px; 
+  margin: 22px auto 0;
+  background: #fff; 
+  border: 1px solid #ececec; 
+  border-radius: 16px; 
+  box-shadow: 0 6px 16px opacity;
+  width: min(980px, 100% - 40px);
+}
+
+.kategori-kutu { 
+  padding: 10px 16px; 
+  border-radius: 30px; 
+  gap: 10px; 
+  font-weight: 600;
+}
+
+.kategori-kutu img{ 
+  width: 24px; height: 24px;
+}
+
+.kategori-kutu.aktif { 
+  background: #1E1E1E; 
+  color: #fff;
+}
+
+/* İlk Section */
+.kampanya-alani { 
+  background: #FAF7F2; 
+  padding: 28px 0;
+}
+.kampanya-alani .icerik-govde { 
+  width: min(1120px, 100% - 80px); 
+  margin-inline: auto;
+}
+
+.promos-desen {
+  display: grid; 
+  gap: 18px;
+  grid-template-columns: 1.6fr 1fr;
+  grid-auto-rows: 180px;
+}
+
+.kampanya-kutu {
+  position: relative; 
+  border-radius: 18px; 
+  overflow: hidden;
+  padding: 22px; 
+  display: flex; 
+  align-items: center;
+}
+
+.kampanya-icerik { 
+  z-index: 1; 
+  max-width: 60ch; 
+}
+
+.kirmizi-buyuk {
+  background: #D83A3B; color: #fff;
+  grid-row: 1 / span 2;
+  min-height: 380px;
+}
+
+.kampanya-baslik {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  font-family: "Quattrocento";
+  margin-bottom: 10px;
+}
+
+.kampanya-alt { 
+  margin: 6px 0 16px; 
+  opacity: 0.95;
+}
+
+.kirmizi-buyuk .kampanya-resim {
+  position: absolute; 
+  right: 14px; 
+  bottom: -10px;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.koyu-kutu{ 
+  background: #1f1f1f; 
+  color: #fff;
+}
+
+.koyu-kutu .kampanya-icerik { 
+  max-width: 24rem;
+}
+
+.koyu-kutu .kampanya-resim { 
+  right: 14px; 
+  bottom: -8px; 
+  max-height: 175px;
+}
+
+.bej-kutu{ 
+  background: #EFE7DA; 
+  color: #2e2a21; 
+}
+
+.bej-kutu .kampanya-resim { 
+  right: 12px; 
+  bottom: -6px; 
+  max-height: 170px; 
+}
+
+.uzatma { 
+  color: #D83A3B; 
+  letter-spacing: 0.4px;
+}
+
+.dugme { 
+  padding: 10px 18px; 
+  border-radius: 30px; 
+  font-weight: 700;
+}
+
+.dugme-kucuk { 
+  padding: 9px 14px;
+}
+
+/* İkinci Section */
+
+.menu-alani .icerik-govde { 
+  width: min(1120px, 100% - 80px); 
+  margin-inline: auto;
+}
+
+.el-yazisi { 
+  color: #C94B42; 
+  font-size: 20px; 
+  margin-bottom: 6px;
+}
+
+.urun-alt {
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  color: #777;
+}
+
+.urun-alt .puan { 
+  order: 1;
+}
+.urun-alt .adet { 
+  order: 2; 
+  margin-left: auto; 
+  margin-right: 12px;
+}
+.urun-alt .fiyat { 
+  order:3 ;
+}
+
+/* Footer */
+.alt-bolum { 
+  background: #141414; 
+  color: #d8d8d8; 
+  padding: 34px 0 14px;
+}
+.alt-bolum .icerik-govde { 
+  width: min(1120px, 100% - 80px);
+  margin-inline: auto;
+}
+
+.alt-izgara { 
+  display: grid; 
+  gap: 28px; 
+  grid-template-columns: 1.2fr 1fr 1fr;
+}
+
+.buyuk-logo { 
+  display: block; 
+  height: 72px;
+}
+
+.alt-cubuk {
+  margin-top: 16px; 
+  padding-top: 12px; 
+  border-top: 1px solid #2a2a2a;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  color: #9a9a9a;
+}
+
+.tiny-ikon { 
+  width: 24px; 
+  height: 24px; 
+  opacity: 0.9;
+}
+
+/* Hata Düzeltmeleri - Tasarım İyileştirmeleri 2 */
+
+/* Header */
+.ust-alan {
+  position: relative;
+  background: #fff;
+  padding: 24px 0 18px;
+  overflow: visible;
+}
+
+.ust-alan::before {
+  content: "";
+  position: absolute;
+  inset: 0 32px;
+  background: #CE2829;
+  z-index: -1;
+  border-radius: 0;
+}
+
+.ust-alan .kategori-kutu.aktif {
+  background: #fff;
+  color: #333;
+  border-color: transparent;
+}
+
+/* İlk Section */
+.kirmizi-buyuk .kampanya-resim {
+  position: absolute;
+  right: -40px;
+  bottom: -60px;
+  height: 120%;
+  max-height: none;
+  object-fit: contain;
+}
+
+.koyu-kutu {
+  padding-right: 230px;
+}
+
+.koyu-kutu .kampanya-resim {
+  right: 14px;
+  bottom: -8px;
+  max-height: 175px;
+}
+
+/* İkinci Section */
+.urun-alt .puan { 
+  order: 1;
+}
+.urun-alt .adet {
+  order: 2;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.urun-alt .fiyat { 
+  order: 3;
+}
+
+/* Footer */
+
+.tiny-ikon {
+  width: 28px;
+  height: 28px;
+  opacity: 0.9;
+}
+
+/* Hata Düzeltmeleri - Tasarım İyileştirmeleri 3 */
+
+/* Header */
+.ust-alan { 
+  background: #fff; 
+  padding: 24px 0 18px;
+}
+
+.ust-alan .icerik-govde { 
+  position: relative; 
+  width: min(1120px, 100% - 80px); 
+  margin-inline: auto;
+}
+
+.ust-alan .icerik-govde::before {
+  content: "";
+  position: absolute;
+  left: 32px; right: 32px;
+  top: 0;
+  bottom: -260px;
+  background: #CE2829;
+  z-index: -1;
+  border-radius: 0;
+}
+
+/* İlk Section */
+
+.kirmizi-buyuk { 
+  background: transparent; 
+  position: relative; 
+  min-height: 380px;
+}
+
+.kirmizi-buyuk .kampanya-icerik { 
+  position: relative; 
+  z-index: 1; 
+  color: #fff;
+}
+
+.kirmizi-buyuk .kampanya-resim {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* İkinci Section */
+
+.urun-alt .adet {
+  order: 2;
+  margin-left: 135px;
+  margin-right: auto;
+}
+
+/* Footer */
+
+.buyuk-logo { 
+  display: block; 
+  height: 72px; 
+  margin-bottom: 18px;
+}
+
+.alt-baslik { 
+  margin: 8px 0 18px;
+}
+
+.iletisim-liste {
+  gap: 14px;
+}
+
+.tiny-ikon { 
+  width: 31px; 
+  height: 31px; 
+  opacity: 0.9;
+}
+
+/* Hata Düzeltmeleri - Tasarım İyileştirmeleri 4 */
+
+/* Header */
+
+.ust-alan .icerik-govde::before {
+  content: none !important;
+}
+
+.ust-alan {
+  background: #fff;
+  padding: 24px 0 0;
+}
+
+.ust-alan .icerik-govde {
+  position: relative;
+  background: #CE2829;
+  width: calc(100% - 64px) !important;
+  margin: 0 auto !important;
+  padding: 12px 0 0;
+  border-radius: 0;
+  z-index: 0;
+}
+
+.kimlik, .slogan-kutu, .pizza-sahne, .kategori-serit {
+  position: relative;
+  z-index: 1;
+}
+
+.pizza-sahne {
+  max-width: 960px;
+  margin: 16px auto 0;
+}
+.pizza-sahne img {
+  width: 100%;
+  filter: drop-shadow(0 18px 40px opacity);
+}
+
+/* Hata Düzeltmeleri - Tasarım İyileştirmeleri 5 */
+
+/* Header */
+.pizza-sahne {
+  margin-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.slogan-kutu {
+  position: relative;
+  z-index: 2;
+  margin-bottom: clamp(-40px, -5vw, -90px);
+}
+
+.ust-alan .icerik-govde { 
+  overflow: visible;
+}
+
+.pizza-sahne {
+  display: block;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.kategori-alani {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.ust-alan .icerik-govde {
+  padding-bottom: 0 !important;
+  overflow: visible;
+}
+
+.pizza-sahne {
+  margin-bottom: -8px;
+  position: relative;
+  z-index: 3;
+}
+
+.kategori-serit {
+  margin-top: -14px;
+  padding-top: 0;
+  position: relative;
+  z-index: 4;
+}
+
+.pizza-sahne {
+  position: relative;
+  background: #CE2829;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 0;
+  overflow: visible;
+}
+
+.slogan-kutu {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  margin-bottom: -40px;
+}
+
+.pizza-sahne img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.ust-alan .buyuk-baslik {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 300;
+}
+
+/* Mobil Responsive için Tasarım İyileştirmeleri */
+
+/* (<= 1024px) için Tasarım İyileştirmeleri */
+@media (max-width: 1024px) {
+  .icerik-govde {
+    width: min(920px, 100% - 48px);
+  }
+
+  .kategori-kutu {
+    padding: 10px 14px;
+  }
+}
+
+/* (<= 768px) için Tasarım İyileştirmeleri */
+@media (max-width: 768px) {
+  .kategori-serit {
+    width: calc(100% - 24px);
+    margin: 12px auto 0;
+    padding: 12px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .kategori-kutu {
+    width: 100%;
+    justify-content: center;
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+  .kategori-kutu img {
+     width: 22px;
+     height: 22px;
+  }
+
+  .promos-desen {
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: auto;
+    gap: 14px;
+  }
+  .kirmizi-buyuk {
+    grid-row: auto;
+    min-height: 0;
+  }
+  .kampanya-kutu {
+    padding: 18px;
+  }
+
+  .kampanya-resim {
+    right: 10px;
+    bottom: -6px;
+    max-height: 150px;
+  }
+  .kirmizi-buyuk .kampanya-resim {
+    inset: auto 0 0 0;
+    height: 55%;
+    object-fit: cover;
+  }
+  .kampanya-baslik {
+    font-size: 32px;
+  }
+  .kucuk-baslik {
+    font-size: 20px;
+  }
+
+  .alt-izgara {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .buyuk-logo {
+    margin-bottom: 14px;
+  }
+  .iletisim-liste {
+    gap: 12px;
+  }
+  .ig-izgara {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* (<= 420px) için Tasarım İyileştirmeleri */
+@media (max-width: 420px) {
+  .kategori-kutu {
+    font-size: 14px;
+    padding: 9px 10px;
+  }
+  .kategori-kutu img {
+    width:20px;
+    height:20px;
+  }
+
+  .kampanya-baslik {
+    font-size: 28px;
+  }
+  .kucuk-baslik {
+    font-size: 18px;
+  }
+
+  .alt-baslik {
+    margin: 6px 0 14px;
+  }
+}
+
+/* (<= 768px) için Tasarım İyileştirmeleri 2 */
+/* Yazının Alanın Dışına Çıkması ile ilgili bir hata düzeltildi. */
+
+@media (max-width: 768px) {
+  .kirmizi-buyuk {
+    position: relative;
+    overflow: hidden;
+  }
+  .kirmizi-buyuk .kampanya-resim {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+  }
+  .kirmizi-buyuk .kampanya-icerik {
+    position: relative;
+    z-index: 1;
+    padding: 18px 16px 56px;
+    color: #fff;
+  }
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
 }
 
 button {
@@ -39,7 +1140,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #f9f9f9;
+  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -49,4 +1150,17 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }
