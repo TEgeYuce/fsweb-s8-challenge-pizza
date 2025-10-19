@@ -1,50 +1,85 @@
-import { Link } from "react-router-dom";
-import "../index.css";
+/*
+import React from "react";
+import { useHistory } from "react-router-dom";
 
 export default function Home() {
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push("/form");
+  };
+
   return (
-    <div className="home">
-      <header className="header">
-        <h1>Pizza Sipariş Sistemi</h1>
+    <div>
+      <button className="dugme dugme-sari" onClick={handleClick}>
+        ACIKTIM
+      </button>
+
+      <button className="dugme dugme-beyaz dugme-kucuk" onClick={handleClick}>
+        SİPARİŞ VER
+      </button>
+
+      <button className="dugme dugme-beyaz dugme-kucuk" onClick={handleClick}>
+        SİPARİŞ VER
+      </button>
+
+      <button className="dugme dugme-beyaz dugme-kucuk" onClick={handleClick}>
+        SİPARİŞ VER
+      </button>
+    </div>
+  );
+}
+*/
+
+import React from "react";
+import { useHistory } from "react-router-dom";
+
+export default function Home() {
+  const history = useHistory();
+  const goToForm = () => history.push("/form");
+
+  return (
+    <div>
+      <header className="ust-alan">
+        <div className="icerik-govde">
+          <div className="kimlik">
+            <img className="logo-yazi" src="images/iteration-1-images/logo.svg" alt="Logo" />
+          </div>
+
+          <div className="pizza-sahne" aria-hidden="true">
+            <div className="slogan-kutu">
+              <p className="ince-not">fırsatı kaçırma</p>
+              <h1 className="buyuk-baslik">
+                KOD ACIKTIRIR <br /> PIZZA, DOYURUR
+              </h1>
+              <button className="dugme dugme-sari" onClick={goToForm}>
+                ACIKTIM
+              </button>
+            </div>
+            <img src="images/iteration-1-images/home-banner.png" alt="Banner" />
+          </div>
+        </div>
       </header>
 
-      <main>
-        <section className="hero">
-          <h2>Aç mısın?</h2>
-          <Link to="/form" className="btn-aciktim">
-            AÇIKTIM
-          </Link>
-        </section>
-
-        <section className="menu">
-          <h2>Menüler</h2>
-          <div className="menu-items">
-            <div className="menu-card">
-              <h3>Karışık Pizza</h3>
-              <p>Bol malzeme, tam lezzet!</p>
-              <Link to="/form" className="btn-siparis">
+      {/* kampanyalar */}
+      <section className="kampanya-alani">
+        <div className="icerik-govde promos-desen">
+          <article className="kampanya-kutu kirmizi-buyuk">
+            <div className="kampanya-icerik">
+              <h2 className="kampanya-baslik">Özel<br/>Lezzetus</h2>
+              <p className="kampanya-alt">Position:Absolute Acı Burger</p>
+              <button className="dugme dugme-beyaz dugme-kucuk" onClick={goToForm}>
                 SİPARİŞ VER
-              </Link>
+              </button>
             </div>
+            <img src="images/iteration-2-images/cta/kart-1.png" className="kampanya-resim" alt="Kampanya" />
+          </article>
 
-            <div className="menu-card">
-              <h3>Vejetaryen Pizza</h3>
-              <p>Sağlıklı ve hafif bir seçim.</p>
-              <Link to="/form" className="btn-siparis">
-                SİPARİŞ VER
-              </Link>
-            </div>
+          {/* diğer kampanyalar */}
+        </div>
+      </section>
 
-            <div className="menu-card">
-              <h3>Acılı Pizza</h3>
-              <p>Lezzetin ateşli hali!</p>
-              <Link to="/form" className="btn-siparis">
-                SİPARİŞ VER
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
+      {/* footer */}
     </div>
   );
 }
